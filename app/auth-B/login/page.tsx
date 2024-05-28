@@ -46,6 +46,7 @@ export default function Login() {
               <AuthWithGoogle />
             </Grid>
             <TextField
+              id="email-input"
               label="Email"
               placeholder="Email"
               type="email"
@@ -57,6 +58,7 @@ export default function Login() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
+              id="pass-input"
               label="Contraseña"
               placeholder="Contraseña"
               type="password"
@@ -72,6 +74,7 @@ export default function Login() {
               label="Recuerdame"
             ></FormControlLabel>
             <Button
+              id="login-button"
               type="submit"
               color="primary"
               variant="contained"
