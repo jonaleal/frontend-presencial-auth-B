@@ -265,19 +265,20 @@ export default function Signin() {
               <InputLabel id="demo-simple-select-label">Identificación</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
-                id="demo-simple-select"
+                id="identificacion"
                 value={idType}
                 label="Identificación"
                 required
                 onChange={(e) => setIdType(e.target.value)}
               >
-                <MenuItem value="Cedula">Cédula</MenuItem>
-                <MenuItem value="Pasaporte">Pasaporte</MenuItem>
+                <MenuItem id="identificacion-cedula" value="Cedula">Cédula</MenuItem>
+                <MenuItem id="identificacion-pasaporte" value="Pasaporte">Pasaporte</MenuItem>
               </Select>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="numero-documento"
               label="Número de documento"
               placeholder="Número de documento"
               type="number"
@@ -291,6 +292,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="nombre"
               label="Nombre"
               placeholder="Nombre"
               type="text"
@@ -305,6 +307,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="apellido"
               label="Apellido"
               placeholder="Apellido"
               type="text"
@@ -322,24 +325,25 @@ export default function Signin() {
               <InputLabel id="demo-simple-select-label">Género</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
-                id="demo-simple-select"
+                id="genero"
                 value={gender}
                 label="Género"
                 onChange={(e) => setGender(e.target.value)}
               >
-                <MenuItem value="M">Masculino</MenuItem>
-                <MenuItem value="F">Femenino</MenuItem>
-                <MenuItem value="O">Prefiero no especificar</MenuItem>
+                <MenuItem id="genero-masculino" value="M">Masculino</MenuItem>
+                <MenuItem id="genero-femenino" value="F">Femenino</MenuItem>
+                <MenuItem id="genero-no-especificado" value="O">Prefiero no especificar</MenuItem>
               </Select>
             </FormControl>
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <DatePickerComponent fullWidth handleDateChange={setDate} />
+            <DatePickerComponent id="fecha-nacimiento" fullWidth handleDateChange={setDate} />
           </Grid>
 
           <Grid item xs={12} sm={6}>
             <TextField
+              id="numero-telefono"
               label="Número de teléfono"
               placeholder="Número de teléfono"
               type="text"
@@ -353,6 +357,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="pais"
               label="País"
               placeholder="País"
               type="text"
@@ -366,6 +371,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="provincia"
               label="Provincia"
               placeholder="Provincia"
               type="text"
@@ -379,6 +385,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="ciudad"
               label="Ciudad"
               placeholder="Ciudad"
               type="text"
@@ -392,6 +399,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="direccion"
               label="Dirección"
               placeholder="Dirección"
               type="text"
@@ -405,6 +413,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="correo-electronico"
               label="Correo electrónico"
               placeholder="Correo electrónico"
               type="email"
@@ -420,6 +429,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="contrasena"
               label="Contraseña"
               placeholder="Contraseña"
               type="password"
@@ -434,6 +444,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
+              id="confirmar-contrasena"
               label="Confirmar contraseña"
               placeholder="Confirmar contraseña"
               type="password"
@@ -448,6 +459,7 @@ export default function Signin() {
           </Grid>
           <Grid item xs={12}>
             <Button
+              id="boton-registrarme"
               type="submit"
               color="primary"
               variant="contained"
