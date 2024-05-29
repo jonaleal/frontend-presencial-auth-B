@@ -26,6 +26,7 @@ export default function ResponsiveDatePickers({handleDateChange}:any) {
 
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DesktopDatePicker
+                id="fecha"
                 label="Date"
                 value={date.input}
                 onChange={(newValue) => formatDate(newValue)}
